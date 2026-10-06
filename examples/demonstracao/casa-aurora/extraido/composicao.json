@@ -1,0 +1,426 @@
+{
+  "aprovacao_titular": {
+    "estado": "pendente",
+    "evidencia": ""
+  },
+  "identidade": {
+    "acento": "#a65d34",
+    "fonte": "editorial",
+    "fundo": "#f3ecdf",
+    "tinta": "#382a22"
+  },
+  "movimento": {
+    "botoes": "nenhuma",
+    "cartoes": "nenhuma",
+    "cursor": "nenhum",
+    "imagens": "nenhuma",
+    "parallax": "desligado",
+    "shader": "desligado",
+    "titulos": "nenhum",
+    "transicoes": "nenhuma"
+  },
+  "referencias": [],
+  "requisitos": {
+    "autenticacao": "",
+    "dados": "",
+    "funcionalidades": "",
+    "navegacao": "",
+    "operacoes": "",
+    "paginas": "",
+    "permissoes": ""
+  },
+  "revisao": 1,
+  "schema": 1,
+  "secoes": [
+    {
+      "alternativas": [
+        {
+          "cta": "Planejar minha visita",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "a",
+          "instrucoes": "",
+          "layout": "editorial",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Uma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.",
+          "titulo": "O tempo do pão. O prazer do encontro.",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Planejar minha visita",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "b",
+          "instrucoes": "",
+          "layout": "imersiva",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Uma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.",
+          "titulo": "O tempo do pão. O prazer do encontro.",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Planejar minha visita",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "c",
+          "instrucoes": "",
+          "layout": "mosaico",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Uma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.",
+          "titulo": "O tempo do pão. O prazer do encontro.",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Planejar minha visita",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "d",
+          "instrucoes": "",
+          "layout": "compacta",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Uma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.",
+          "titulo": "O tempo do pão. O prazer do encontro.",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        }
+      ],
+      "escolhida": "a",
+      "fixada": false,
+      "id": "abertura",
+      "tipo": "hero"
+    },
+    {
+      "alternativas": [
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "a",
+          "instrucoes": "",
+          "layout": "editorial",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Fermentação natural, fornadas ao longo do dia e uma seleção simples de pães. Conteúdo fictício.",
+          "titulo": "Feito com tempo",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "b",
+          "instrucoes": "",
+          "layout": "imersiva",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Fermentação natural, fornadas ao longo do dia e uma seleção simples de pães. Conteúdo fictício.",
+          "titulo": "Feito com tempo",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "c",
+          "instrucoes": "",
+          "layout": "mosaico",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Fermentação natural, fornadas ao longo do dia e uma seleção simples de pães. Conteúdo fictício.",
+          "titulo": "Feito com tempo",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "d",
+          "instrucoes": "",
+          "layout": "compacta",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Fermentação natural, fornadas ao longo do dia e uma seleção simples de pães. Conteúdo fictício.",
+          "titulo": "Feito com tempo",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        }
+      ],
+      "escolhida": "d",
+      "fixada": false,
+      "id": "apresentacao",
+      "tipo": "apresentacao"
+    },
+    {
+      "alternativas": [
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "a",
+          "instrucoes": "",
+          "layout": "editorial",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Café coado, viennoiserie e cestas sob encomenda. Nenhum preço ou produto real é anunciado.",
+          "titulo": "Para a sua mesa",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "b",
+          "instrucoes": "",
+          "layout": "imersiva",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Café coado, viennoiserie e cestas sob encomenda. Nenhum preço ou produto real é anunciado.",
+          "titulo": "Para a sua mesa",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "c",
+          "instrucoes": "",
+          "layout": "mosaico",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Café coado, viennoiserie e cestas sob encomenda. Nenhum preço ou produto real é anunciado.",
+          "titulo": "Para a sua mesa",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "d",
+          "instrucoes": "",
+          "layout": "compacta",
+          "material_id": "499d1980baab40708ac1f816b99c4af7",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Café coado, viennoiserie e cestas sob encomenda. Nenhum preço ou produto real é anunciado.",
+          "titulo": "Para a sua mesa",
+          "versao": 1,
+          "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+          "arquivo_mobile": null
+        }
+      ],
+      "escolhida": "c",
+      "fixada": false,
+      "id": "servicos",
+      "tipo": "servicos"
+    },
+    {
+      "alternativas": [
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "a",
+          "instrucoes": "",
+          "layout": "editorial",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Conheça o endereço e os horários demonstrativos. Os canais são exemplos e não devem ser acionados.",
+          "titulo": "Sua próxima pausa",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "b",
+          "instrucoes": "",
+          "layout": "imersiva",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Conheça o endereço e os horários demonstrativos. Os canais são exemplos e não devem ser acionados.",
+          "titulo": "Sua próxima pausa",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "c",
+          "instrucoes": "",
+          "layout": "mosaico",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Conheça o endereço e os horários demonstrativos. Os canais são exemplos e não devem ser acionados.",
+          "titulo": "Sua próxima pausa",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        },
+        {
+          "cta": "Ver informações de exemplo",
+          "desktop": [
+            50,
+            50
+          ],
+          "id": "d",
+          "instrucoes": "",
+          "layout": "compacta",
+          "material_id": "48afdec7a0404bba895f050e68473665",
+          "mobile": [
+            50,
+            50
+          ],
+          "origem": "template_local",
+          "revisado": true,
+          "texto": "Conheça o endereço e os horários demonstrativos. Os canais são exemplos e não devem ser acionados.",
+          "titulo": "Sua próxima pausa",
+          "versao": 1,
+          "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+          "arquivo_mobile": null
+        }
+      ],
+      "escolhida": "a",
+      "fixada": false,
+      "id": "contato",
+      "tipo": "contato"
+    }
+  ],
+  "tipo": "landing",
+  "exportacao": {
+    "id": "9074a57783d949248ee3921a8a18be7a",
+    "versao": 1,
+    "empresa_id": "03c2a2ac38c14ddc9234b6acc632bc9e"
+  }
+}

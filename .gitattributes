@@ -9,3 +9,5 @@
 *.png binary
 *.zip binary
 *.woff2 binary
+# Preserve os bytes do pacote exportado para manter os hashes do manifesto.
+examples/demonstracao/casa-aurora/extraido/** -text whitespace=-blank-at-eol,-blank-at-eof

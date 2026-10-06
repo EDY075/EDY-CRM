@@ -1,0 +1,40 @@
+[
+  {
+    "arquivo": "materiais/499d1980baab40708ac1f816b99c4af7.png",
+    "nome_original": "ilustracao-ficticia-1.png",
+    "material_id": "499d1980baab40708ac1f816b99c4af7",
+    "disponibilidade": "arquivo_local_anexado",
+    "direcao": {
+      "natureza": "a_confirmar"
+    },
+    "categoria": "referencia",
+    "origem": "Ilustração geométrica original do script demonstracao.py; sem IA",
+    "atribuicao": "EDY GOMES · ilustração de demonstração",
+    "uso": "Confirmado pelo usuário",
+    "posicao_sugerida": "Estudo abstrato; não produto, equipe ou instalação real",
+    "sha256": "49ff922c1ba6adc57d409ecc3b2f604ae988e342234e30ba0789ce2eda0cbc57",
+    "natureza": "ilustracao",
+    "natureza_original": "ilustracao",
+    "versao": null,
+    "coleta_social": {}
+  },
+  {
+    "arquivo": "materiais/48afdec7a0404bba895f050e68473665.png",
+    "nome_original": "ilustracao-ficticia-2.png",
+    "material_id": "48afdec7a0404bba895f050e68473665",
+    "disponibilidade": "arquivo_local_anexado",
+    "direcao": {
+      "natureza": "a_confirmar"
+    },
+    "categoria": "referencia",
+    "origem": "Ilustração geométrica original do script demonstracao.py; sem IA",
+    "atribuicao": "EDY GOMES · ilustração de demonstração",
+    "uso": "Confirmado pelo usuário",
+    "posicao_sugerida": "Estudo abstrato; não produto, equipe ou instalação real",
+    "sha256": "572d87a144ff427636d6a6bacff1b2a9f16a198f7ec3871d05b22954a77c8d4a",
+    "natureza": "ilustracao",
+    "natureza_original": "ilustracao",
+    "versao": null,
+    "coleta_social": {}
+  }
+]

@@ -1,0 +1,210 @@
+{
+  "empresa_id": "03c2a2ac38c14ddc9234b6acc632bc9e",
+  "projeto_id": "",
+  "nome": "Casa Aurora — demonstração",
+  "versao": 2,
+  "metodo": "templates_revisaveis_sem_IA",
+  "estado": "precisa_revisao",
+  "fatos": {
+    "nome": {
+      "campo": "nome",
+      "valor": "Casa Aurora — demonstração",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "nicho": {
+      "campo": "nicho",
+      "valor": "Padarias",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "cidade": {
+      "campo": "cidade",
+      "valor": "Cidade Fictícia",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "uf": {
+      "campo": "uf",
+      "valor": "SP",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "bairro": {
+      "campo": "bairro",
+      "valor": "Jardim Modelo",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "endereco": {
+      "campo": "endereco",
+      "valor": "Rua do Exemplo, 100 · Jardim Modelo · Cidade Fictícia, SP",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "telefone": {
+      "campo": "telefone",
+      "valor": "(00) 0000-0000",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "instagram": {
+      "campo": "instagram",
+      "valor": "https://www.instagram.com/exemplo_ficticio_casa_aurora/",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "servicos": {
+      "campo": "servicos",
+      "valor": "Pães de fermentação natural; viennoiserie; café coado; cestas de café da manhã sob encomenda.",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "horarios": {
+      "campo": "horarios",
+      "valor": "Segunda a sábado, 07h–19h. Domingo, 08h–13h. Horários fictícios.",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "descricao": {
+      "campo": "descricao",
+      "valor": "Uma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "email": {
+      "campo": "email",
+      "valor": "contato@casa-aurora.example",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    },
+    "redes_sociais": {
+      "campo": "redes_sociais",
+      "valor": "https://www.instagram.com/exemplo_ficticio_casa_aurora/",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "confirmado_usuario",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    }
+  },
+  "candidatos": {
+    "site": {
+      "campo": "site",
+      "valor": "https://casa-aurora.example",
+      "fornecedor": "manual",
+      "url": "",
+      "consultado_em": "2026-10-06T02:33:05+00:00",
+      "verificacao": "a_confirmar",
+      "retencao": "Cadastro do usuário",
+      "exportavel": true
+    }
+  },
+  "proposta": {
+    "objetivo": "Apresentar a padaria fictícia, explicar a oferta e facilitar o planejamento de uma visita.",
+    "publico": "Pessoas do bairro que valorizam um café tranquilo, pão artesanal e presentes à mesa.",
+    "oferta": "Pães e café no salão; encomendas de cestas com antecedência. Oferta fictícia, sem preços reais.",
+    "cta": "Planejar minha visita",
+    "oportunidade": "Proposta para organizar a apresentação de Casa Aurora — demonstração em Jardim Modelo, Cidade Fictícia. Hipótese a revisar; não indica intenção de compra ou perda de clientes.",
+    "jornada": "Identificar Casa Aurora — demonstração → entender Pães de fermentação natural; viennoiserie; café coado; cestas de café da manhã sob encomenda. → conhecer materiais reais → abrir o canal confirmado.",
+    "arquitetura": "1. O tempo do pão. O prazer do encontro. [abertura] — texto revisado\n2. Feito com tempo [apresentacao] — texto revisado\n3. Para a sua mesa [servicos] — texto revisado\n4. Sua próxima pausa [contato] — texto revisado",
+    "copy": "O tempo do pão. O prazer do encontro.\nUma padaria fictícia dedicada ao pão de fermentação natural e aos encontros à mesa. Todos os dados deste cadastro são demonstrativos.\n\nFeito com tempo\nFermentação natural, fornadas ao longo do dia e uma seleção simples de pães. Conteúdo fictício.\n\nPara a sua mesa\nCafé coado, viennoiserie e cestas sob encomenda. Nenhum preço ou produto real é anunciado.\n\nSua próxima pausa\nConheça o endereço e os horários demonstrativos. Os canais são exemplos e não devem ser acionados.",
+    "direcao": "paleta: #382a22 / #f3ecdf / #a65d34\nfonte_titulos: Serifada editorial\nfonte_texto: Geist / sistema, legível\nestilo: Editorial acolhedor: papel, terracota, grandes títulos e ilustrações originais.\ncomposicao: Ilustrações próprias, alternância de layout e CTA por âncora interna.\nmovimento: Movimento discreto; respeitar prefers-reduced-motion e pausar fora da tela.\nshader: Textura orgânica discreta e luz morna; fallback estático.\ntitulos: Entrada curta de título e subtítulo, sem esconder texto quando JavaScript falhar.\ncursor: Opcional: Pontos de luz quente inspirados no forno; sem simular fogo real. Somente ponteiro fino; desativar no celular e em movimento reduzido.\nrestricoes: Sem animações pesadas no celular; nenhuma imagem ilustrativa apresentada como registro real.",
+    "interacoes": "Navegação por âncoras reais, foco visível e teclado. CTA com destino confirmado; validar o canal antes de publicar. Fotos autorizadas; movimento reduzido sem perda de conteúdo.",
+    "prospeccao": "TEXTO DE DEMONSTRAÇÃO, NÃO ENVIAR. Olá! Este exemplo mostra uma proposta personalizada para Casa Aurora — demonstração. A prévia organiza a apresentação e o contato conforme o brief fictício."
+  },
+  "pendencias": [
+    "Conferir identidade do estabelecimento e informações com a empresa.",
+    "Associação do site pendente: conferir URL, identidade e evidências; outras fontes e upload continuam disponíveis.",
+    "Confirmar objetivo, público, CTA e decisões de design do briefing."
+  ],
+  "campos_editados": [],
+  "campos_aceitos_ia": [],
+  "edicoes_preservadas": [],
+  "preparado_em": "2026-10-06T02:33:05+00:00",
+  "origem_dados_atualizado_em": "2026-10-06T02:33:05+00:00",
+  "preparacao_revisao": 1,
+  "materiais_snapshot": [
+    {
+      "id": "499d1980baab40708ac1f816b99c4af7",
+      "sha256": null,
+      "autorizado": true,
+      "selecionado": true
+    },
+    {
+      "id": "48afdec7a0404bba895f050e68473665",
+      "sha256": null,
+      "autorizado": true,
+      "selecionado": true
+    }
+  ],
+  "revisao": {
+    "documental": "com_pendencias",
+    "visual": "nao_executada",
+    "observacoes": "Revisão de dados integralmente fictícios; não valida operação externa.",
+    "construcao_id": null,
+    "checklist": {},
+    "revisado_em": "2026-10-06T02:33:05+00:00",
+    "metodo_visual": null
+  },
+  "skill": {
+    "nome": "crm-sites-adaptativo",
+    "sha256": "02e8ad3d79ce17848a27c56bd77a4edfec3fd2853377bd5ec5fac452dec8436a",
+    "origem": "Fluxo de referência integrado localmente",
+    "modo": "instrucoes_materializadas"
+  },
+  "publicado": false,
+  "prospeccao_enviada": false,
+  "atualizado_em": "2026-10-06T02:33:05+00:00",
+  "correcoes_aplicaveis": [],
+  "observacoes_candidatas_pendentes": 0
+}
