@@ -2,9 +2,21 @@
 
 **Desenvolvido por EDY GOMES.** Um workspace local para transformar pesquisa e informações revisadas em propostas visuais, pacotes portáteis e prévias de sites que podem ser refinadas por texto ou voz.
 
-![Dashboard real do EDY CRM com três empresas explicitamente fictícias](docs/images/dashboard-desktop.jpg)
+![EDY CRM — da empresa à prévia, com captura real e dados fictícios](docs/assets/edy-crm-cover.jpg)
+
+![React 19](https://img.shields.io/badge/React-19-149eca) ![Flask](https://img.shields.io/badge/Backend-Flask-323d50) ![SQLite](https://img.shields.io/badge/Banco-SQLite-577a97) [![Licença MIT do código](https://img.shields.io/badge/Código-MIT-cb875d)](LICENSE)
 
 Este é um **case público de engenharia**, com código executável e demonstração isolada. Os dados das capturas são fictícios. Nenhuma página representa um cliente contratado, site oficial ou resultado comercial.
+
+## Veja o CRM em movimento
+
+**1 min 36 s · 30 áreas · capturas reais · empresas fictícias.** Pesquisa, cadastro, materiais, brief, galeria, montagem, exportação, HTML desktop/celular, versões, chat, conexões e temas.
+
+https://github.com/user-attachments/assets/2e5ddc00-49fc-4c5a-9007-97bbe446f092
+
+[MP4 compacto](docs/assets/edy-crm-apresentacao.mp4) · [Vídeo 1080p em maior qualidade](https://github.com/EDY075/EDY-CRM/releases/download/case-media-2026-10-06/edy-crm-tour-1080p.mp4) · [Capítulos, créditos e alcance da demonstração](docs/APRESENTACAO.md)
+
+O vídeo é um tour editado da aplicação com construção local. Não representa nova operação de IA, coleta externa ou refinamento enviado. “Horizons” by Scott Buckley – released under CC-BY 4.0. [Fonte e licença](docs/APRESENTACAO.md#música-e-licença).
 
 ## O problema e o fluxo
 
@@ -83,6 +95,7 @@ Os testes usam bancos temporários dentro de `.cache/`. Build aprovado não é a
 
 - [História de engenharia, decisões e aprendizados](docs/CASE-STUDY.md)
 - [Integrações e acessos pendentes](docs/INTEGRACOES.md)
+- [Apresentação, vídeo e capítulos](docs/APRESENTACAO.md)
 - [Demonstração e capturas](docs/DEMONSTRACAO.md)
 - [Pacote completo de uma empresa fictícia](examples/demonstracao/casa-aurora/README.md)
 - [Verificações e limites](docs/VERIFICACAO.md)

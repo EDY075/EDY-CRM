@@ -30,3 +30,6 @@ backend/instagram/sessao/
 backend/instagram/comentarios/
 instalador/saida/
 .DS_Store
+brag-output/
+# Local exception for the ignored media viewer, not part of the distributed app.
+.impeccable/config.json

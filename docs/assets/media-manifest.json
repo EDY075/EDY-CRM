@@ -1,0 +1,62 @@
+{
+  "data": "2026-10-06",
+  "escopo": "Demonstração fictícia real; sem nova operação de fornecedores.",
+  "arquivos": [
+    {
+      "arquivo": "edy-crm-apresentacao.mp4",
+      "bytes": 9483155,
+      "sha256": "a61710feeacb67b60d1af6a9ecb163935bdf31c99114c1d0d999bf0c6f17a7f8",
+      "media": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1920,
+            "height": 1080,
+            "pix_fmt": "yuv420p",
+            "r_frame_rate": "30/1",
+            "nb_frames": "2880"
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "nb_frames": "4501"
+          }
+        ],
+        "format": {
+          "duration": "96.000000"
+        }
+      }
+    },
+    {
+      "arquivo": "edy-crm-cover.jpg",
+      "bytes": 677544,
+      "sha256": "2decf19b4ec667e75b0e8ecb2ec6bcce83f7f45607ec92bccf31da8f2b3cde5e",
+      "dimensoes": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "arquivo": "edy-crm-social.jpg",
+      "bytes": 310849,
+      "sha256": "1165e3631dfccc73b8b38746e9d1dff8e34334d727c5d04e69e422b688ed58fb",
+      "dimensoes": [
+        1200,
+        630
+      ]
+    },
+    {
+      "arquivo": "edy-crm-vertical.jpg",
+      "bytes": 521478,
+      "sha256": "6f640f4ca329d08f2c929024a1dc0b8758b05da7ed93f08537505f999d304c82",
+      "dimensoes": [
+        1080,
+        1920
+      ]
+    }
+  ]
+}

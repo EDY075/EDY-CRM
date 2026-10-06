@@ -38,3 +38,15 @@ Testes de navegador adicionais em `frontend/tests/` usam Playwright e exigem seu
 Documentos e capturas foram revisados para não expor carteira, conta autenticada ou materiais comerciais privados. O exemplo exportado pode ser extraído em outra pasta; documentos, manifestos e materiais usam caminhos relativos. O README e as capturas foram verificados após a publicação no GitHub; o autor, branch e commit remoto são conferidos separadamente do estado local.
 
 Limitações de permissão, modelo e licença de materiais continuam valendo. Clonar o projeto não configura Google, Instagram, API de imagens, voz externa ou runtime/login Codex. Publicar este case não publica páginas de clientes nem envia mensagens de prospecção.
+
+## Apresentação em vídeo — 6 de outubro de 2026
+
+Rodada restrita a mídia e documentação. Não houve mudança no código da aplicação, novo build ou nova execução da suíte: os resultados técnicos acima pertencem à entrega de distribuição identificada.
+
+O tour inclui 30 áreas gravadas da demonstração local. Os 30 pontos médios, abertura, encerramento e cortes foram inspecionados; três enquadramentos foram corrigidos. A cobertura de caracteres das legendas foi conferida na fonte Geist latin. O MP4 compacto tem 96 s, 2.880 frames, H.264 1920 × 1080 a 30 fps e AAC estéreo 48 kHz, **9.483.155 bytes**. Master e compacto passaram pela decodificação integral do FFmpeg sem erros. No Chrome, o compacto carregou 96 s de duração e avançou até 19,83 s após iniciar pelo teclado, sem erro de mídia.
+
+Os quatro arquivos de mídia têm hashes e dimensões no [manifesto](assets/media-manifest.json); **41 links relativos** do README, NOTICE e documentos foram conferidos nesta revisão. A versão de maior qualidade fica na release e a compacta no Git. A publicação e a reprodução nativa no README são verificadas após o push.
+
+Um aviso Impeccable de contraste na página local de reprodução assumiu fundo branco, embora o Chrome mostrasse fundo `#080d19`. Os pares reais foram medidos em 17,55:1, 12,35:1 e 9,22:1. Registrou-se exceção somente de `low-contrast` para esse arquivo local ignorado; nenhum detector da aplicação foi desativado. Problemas reais corrigidos: fonte e enquadramentos. Nenhum achado incerto ficou aberto nesse visualizador.
+
+O [roteiro e alcance do vídeo](APRESENTACAO.md) distinguem tour da interface, construção local e operações externas. Não há novos testes de inferência, microfone físico ou coleta de fornecedores nesse vídeo.
