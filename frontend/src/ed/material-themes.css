@@ -1,0 +1,29 @@
+/* A mesma construção de vidro, com materiais e tinta próprios de cada tema. */
+[data-theme=escuro]{--ed-bg:#0e161d;--ed-ink:#f3f6fa;--ed-muted:#d4e1ed;--ed-border:#d9e5ff40;--ed-white:rgb(3 8 22/.05);--ed-dark:transparent;--ed-topbar:transparent;--ed-soft:#dbeaff0d;--ed-row-head:#ffffff06;--ed-row-hover:#ffffff12;--ed-green:#9de1ff;--ed-focus:#9de1ff;--ed-primary-ink:#fff;--ed-side-ink:#f3f6fa;--ed-side-muted:#d4e1ed;--ed-side-active:#ffffff15;--ed-side-active-ink:#fff;--ed-avatar:#71adc645;--ed-overlay:#152432;--ed-glass-reflection:linear-gradient(130deg,#ffffff0c,rgb(3 8 22/calc(var(--ed-glass-opacity,.26)*.5)) 50%,#ffffff05)}
+[data-theme=escuro] .ed-nebula{background:#0e161d}
+[data-theme=escuro] .ed-button.primary{background:linear-gradient(#286382,#183e57);border-color:#b5dcf860;text-shadow:0 1px 2px #061828}
+[data-theme=escuro] .ed-brand-symbol{color:#a6deef;background:#a8d7ed20}
+[data-theme=escuro] :is(.ed-appearance-panel,.ed-mobile-menu[open]>nav,dialog,[role=dialog],[role=tooltip]){background:var(--ed-overlay)}
+[data-theme=escuro] option{background:var(--ed-overlay);color:var(--ed-ink)}
+[data-theme=claro]{--ed-bg:#97c9de;--ed-ink:#102c43;--ed-muted:#204960;--ed-border:#2b62774a;--ed-white:rgb(220 243 255/.14);--ed-dark:transparent;--ed-topbar:transparent;--ed-soft:#f0faff36;--ed-row-head:#e7f8ff30;--ed-row-hover:#effbff50;--ed-green:#164a65;--ed-focus:#123e59;--ed-primary-ink:#fff;--ed-side-ink:#102c43;--ed-side-muted:#204960;--ed-side-active:#d2eeff60;--ed-side-active-ink:#102c43;--ed-side-soft:#e1f4ff28;--ed-side-border:#2b627730;--ed-avatar:#2464872b;--ed-overlay:#d5eaf3;--ed-glass-reflection:linear-gradient(130deg,rgb(235 249 255/calc(.12 + var(--ed-glass-opacity,.26)*.65)),rgb(195 229 245/calc(.08 + var(--ed-glass-opacity,.26)*.5)) 50%,#ffffff12)}
+[data-theme=claro] .ed-nebula{background:#97c9de}
+[data-theme=claro] :is(h1,h2,h3,strong,p,small,label,td,th,a,summary,.ed-breadcrumb,.ed-local,.ed-nav-label){text-shadow:0 1px 2px #ecfaff9c}
+[data-theme=claro] :is(input:not([type=checkbox]):not([type=range]),select,textarea){background:#dcf1ff3b;color:var(--ed-ink);text-shadow:none}
+[data-theme=claro] input::placeholder,[data-theme=claro] textarea::placeholder{color:#32586e;opacity:1}
+[data-theme=claro] .ed-button.primary{background:linear-gradient(#225b7a,#174360);border-color:#16405b;text-shadow:0 1px 2px #061828;color:#fff}
+[data-theme=claro] .ed-button:not(.primary){background:#e0f4ff30;color:var(--ed-ink)}
+[data-theme=claro] .ed-sidebar nav>a:hover{color:var(--ed-ink)}
+[data-theme=claro] .ed-sidebar nav>a.active{color:var(--ed-ink)}
+[data-theme=claro] .ed-brand-symbol{color:#225c7c;background:#b9e2f760}
+[data-theme=claro] .ed-universe-brand{color:#163e58; text-shadow:0 1px 2px #e5f6ff}
+[data-theme=claro] :is(.ed-appearance-panel,.ed-mobile-menu[open]>nav,dialog,[role=dialog],[role=tooltip]){background:var(--ed-overlay);color:var(--ed-ink)}
+[data-theme=claro] option{background:var(--ed-overlay);color:var(--ed-ink)}
+.ed-theme-preview.claro{background:center/cover url('./assets/edy-water.webp')}
+.ed-theme-preview.escuro{background:center/cover url('./assets/edy-smoke.webp')}
+.ed-theme-preview.nebulosa{background:center/cover url('./assets/edy-universe.webp')}
+/* A direção da landing não herda sombras nem transparência do CRM. */
+.lp-section :is(h1,h2,h3,strong,p,small,label,a,summary){text-shadow:none!important}
+.lp-imersiva .lp-visual:has(.lp-placeholder){opacity:1}
+@supports not (backdrop-filter:blur(1px)){[data-theme=claro]{--ed-glass-reflection:#d3e8f0d9}[data-theme=escuro],[data-theme=nebulosa]{--ed-glass-reflection:#101a2bd9}}
+
+.ed-reference-captures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.ed-reference-captures figure{margin:0;min-width:0}.ed-reference-captures img{width:100%;height:240px;object-fit:contain;background:var(--ed-soft);border:1px solid var(--ed-border);border-radius:8px}.ed-reference-captures figcaption{font-size:11px;line-height:1.5;margin-top:6px}@media(max-width:640px){.ed-reference-captures{grid-template-columns:1fr}}

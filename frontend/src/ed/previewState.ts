@@ -1,0 +1,2 @@
+export interface PreviewProject {empresa_id:string;construcao_id:string;nome:string;nicho:string;cidade:string;versoes:number;estado:string;motivo:string;url_ativa?:string;abrir_url:string;miniatura_url?:string;refinar_url?:string;modelo?:string}
+export const previewLabels:Record<string,string>={disponivel:'Disponível para abrir',servidor_parado:'Arquivos salvos · abrir para iniciar',arquivos_ausentes:'Arquivos precisam de recuperação',em_construcao:'Construção em andamento',falhou:'Construção requer revisão'}

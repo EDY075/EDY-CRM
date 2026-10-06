@@ -1,0 +1,6 @@
+{
+  "executavel": "data/runtime-cli/codex.exe",
+  "versao": "0.160.0",
+  "sha256": "37762753b554982eef1c109303d1be652b6397f1479e844794353a85650199c6",
+  "companheiros": [{"executavel":"data/runtime-cli/codex-code-mode-host.exe","versao":"0.160.0","sha256":"1d448bfde19e7a280d600d8d0bcddf77afbe9feaec1e804905becc5f39bc9db6","origem":"https://github.com/openai/codex/releases/tag/rust-v0.160.0"}]
+}

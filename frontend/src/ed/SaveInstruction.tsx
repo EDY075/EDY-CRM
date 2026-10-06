@@ -1,0 +1,10 @@
+import {useState} from 'react'
+import {useMutation,useQueryClient} from '@tanstack/react-query'
+import {libraryApi} from './libraryApi'
+import {Erro,Field} from './shared'
+
+export function SaveInstruction({company,niche,text,disabled}:{company?:string;niche?:string;text:string;disabled:boolean}){
+ const [scope,setScope]=useState(company?'lead':'global'),[title,setTitle]=useState('Orientação revisada no chat'),client=useQueryClient()
+ const save=useMutation({mutationFn:async()=>{const item=await libraryApi.save({tipo:'contexto',titulo:title,conteudo:text,escopo:scope,vinculo:scope==='nicho'?niche:scope==='global'?'':company,estado:'ativo',origem:'Orientação explicitamente salva no compositor',prioridade:7});if(company){const ctx=await libraryApi.context(company);if(ctx.selecao.selecionados)await libraryApi.choose(company,{...ctx.selecao,selecionados:[...new Set([...ctx.selecao.selecionados,item.id])]})}return item},onSuccess:()=>client.invalidateQueries({queryKey:['ed']})})
+ return <details><summary>Salvar comando como orientação reutilizável</summary><p>Salva o texto atual somente após este botão. Falar ou enviar um comando não cria uma regra global.</p><Field label="Título da orientação"><input value={title} maxLength={120} onChange={e=>setTitle(e.target.value)}/></Field><Field label="Aplicar orientação"><select value={scope} onChange={e=>setScope(e.target.value)}>{company&&<><option value="lead">Esta empresa</option><option value="projeto">Projetos desta empresa</option></>}{niche&&<option value="nicho">Este nicho · {niche}</option>}<option value="global">Todo o EDY neste workspace</option></select></Field><button className="ed-button" type="button" disabled={disabled||save.isPending||!text.trim()||!title.trim()} onClick={()=>save.mutate()}>Salvar orientação revisada</button>{save.isSuccess&&<p role="status">Orientação versionada na Biblioteca. Consulte a seleção de contexto da empresa para conferir sua aplicação.</p>}{save.isError&&<Erro error={save.error}/>}</details>
+}

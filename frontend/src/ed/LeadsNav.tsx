@@ -1,0 +1,2 @@
+import {NavLink} from 'react-router-dom'
+export function LeadsNav(){return <nav className="ed-settings-tabs" aria-label="Organizar leads">{[['/leads','Empresas'],['/crm/contatos','Contatos'],['/crm/funil','Funil'],['/crm/tarefas','Tarefas'],['/crm/listas','Listas'],['/nova-busca','Pesquisar'],['/campanhas','Histórico'],['/crm/csv','Importar']].map(([path,label])=><NavLink key={path} to={path}>{label}</NavLink>)}</nav>}

@@ -1,0 +1,43 @@
+import {test,expect} from '@playwright/test'
+import AxeBuilder from '@axe-core/playwright'
+
+test('CRM: oportunidade, tarefa, filtro salvo, chat com ferramenta e mobile',async({page,request})=>{
+ const lead=await(await request.post('/api/ed/empresas',{data:{nome:'Empresa fictícia · operação',demonstracao:true}})).json()
+ await page.goto('/crm/funil');await page.getByRole('button',{name:'Nova oportunidade',exact:true}).click()
+ await page.getByLabel('Empresa relacionada').selectOption(lead.id)
+ await page.getByLabel('Título da oportunidade').fill('Proposta QA identificada')
+ await page.getByRole('button',{name:'Salvar Oportunidade',exact:true}).click()
+ await expect(page.getByRole('heading',{name:'Proposta QA identificada'})).toBeVisible()
+ const card=page.locator('.ed-opportunity').filter({hasText:'Proposta QA identificada'})
+ await card.getByLabel('Mover Proposta QA identificada').selectOption('qualificado')
+ await expect(page.locator('.ed-kanban > section').filter({has:page.getByRole('heading',{name:/Qualificada/})})).toContainText('Proposta QA identificada')
+ await page.getByRole('button',{name:'Ver em tabela'}).click()
+ await page.getByRole('row').filter({hasText:'Proposta QA identificada'}).getByLabel('Mover Proposta QA identificada').selectOption('proposta')
+ await page.getByRole('button',{name:'Ver em Kanban'}).click()
+ await expect(page.locator('.ed-kanban > section').filter({has:page.getByRole('heading',{name:/Proposta preparada/})})).toContainText('Proposta QA identificada')
+ await page.goto('/crm/tarefas');await page.getByRole('button',{name:'Adicionar Tarefa'}).click()
+ await page.getByLabel('Título da tarefa').fill('Revisar QA')
+ await page.getByLabel('Vencimento',{exact:true}).fill('2026-10-06')
+ await page.getByRole('button',{name:'Salvar Tarefa'}).click()
+ await page.getByRole('button',{name:'Concluir tarefa'}).click();await expect(page.locator('.ed-record-card').filter({hasText:'Revisar QA'})).toContainText('Concluída')
+ await page.goto('/leads');await page.getByLabel('Buscar empresas').fill('operação');await page.getByText('Visualizações salvas deste workspace').click()
+ await page.getByLabel('Nome da visualização').fill('Meu filtro QA');await page.getByRole('button',{name:'Salvar filtros atuais'}).click()
+ await page.getByLabel('Buscar empresas').fill('não encontrado');await page.getByRole('button',{name:'Meu filtro QA'}).click();await expect(page.getByLabel('Buscar empresas')).toHaveValue('operação')
+ await page.goto('/assistente');await page.getByLabel('Empresa (opcional)').selectOption(lead.id)
+ await page.getByLabel('Seu comando').fill('Mostre os leads sem site')
+ await page.getByRole('button',{name:'Executar comando'}).click();await expect(page.locator('.ed-flow-card')).toContainText('Na fila')
+ await page.getByRole('button',{name:'Pausar',exact:true}).click();await expect(page.locator('.ed-flow-card')).toContainText('Pausada')
+ await page.reload();await page.getByText('Conversas anteriores',{exact:false}).click();await page.getByRole('button',{name:/Conversa ·/}).first().click();await expect(page.getByText('Mostre os leads sem site',{exact:true})).toBeVisible()
+ for(const width of [320,768,1440]){await page.setViewportSize({width,height:900});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBeTruthy()}
+ expect((await new AxeBuilder({page}).analyze()).violations).toEqual([])
+})
+
+test('Nebulosa: reflexão, qualidade, ponteiro, persistência e redução',async({page})=>{
+ await page.goto('/configuracoes/aparencia');await page.getByRole('button',{name:/^Nebulosa/}).click()
+ await expect(page.locator('.ed-universe-image')).toHaveCount(1)
+ await page.getByText('Ajustar transparência, fundo e efeitos',{exact:false}).click();await page.getByLabel('Qualidade do fundo').selectOption('economica');await expect(page.locator('.ed-nebula')).toHaveAttribute('data-quality','economica')
+ await page.getByLabel('Rastro discreto do ponteiro').check();await page.reload();await page.getByText('Ajustar transparência, fundo e efeitos',{exact:false}).click();await expect(page.getByLabel('Rastro discreto do ponteiro')).toBeChecked()
+ await expect(page.getByLabel('Qualidade do fundo')).toHaveValue('economica')
+ await page.emulateMedia({reducedMotion:'reduce'});await expect(page.locator('.ed-cloud').first()).toHaveCSS('animation-name','none')
+ expect((await new AxeBuilder({page}).analyze()).violations).toEqual([])
+})

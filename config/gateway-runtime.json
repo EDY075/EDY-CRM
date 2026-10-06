@@ -1,0 +1,15 @@
+{
+  "repositorio": "https://github.com/decolua/9router",
+  "versao": "0.5.95",
+  "commit": "a99cf57239ff778b61e434c2786009d5ed1c412c",
+  "licenca": "MIT",
+  "lock": "config/9router-package-lock.json",
+  "lock_sha256": "683f15e3634f56c9e1be61014d42f2ebfd225c34632506c65f461cd8d8886e7f",
+  "node_validado": "24.17.0",
+  "codigo": ".tools/9router-src",
+  "dados": "data/gateway/9router",
+  "host": "127.0.0.1",
+  "porta": 20128,
+  "combos_automaticos": false,
+  "autenticacao_codex_importada": false
+}

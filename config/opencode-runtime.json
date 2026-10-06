@@ -1,0 +1,6 @@
+{
+  "versao": "1.18.31",
+  "executavel": ".tools/opencode/node_modules/opencode-ai/bin/opencode.exe",
+  "sha256": "0242a0dc705af67c90882b456a36b619883c1c786aad8fe071a1bc64e5d1d440",
+  "fonte": "npm opencode-ai@1.18.31; MIT"
+}

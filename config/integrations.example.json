@@ -1,0 +1,34 @@
+{
+  "google_places": {
+    "enabled": false,
+    "mode": "transient_reference",
+    "credentials_env": "ED_CRM_GOOGLE_PLACES_KEY",
+    "persist_fields": ["place_id"],
+    "exportable": false,
+    "field_mask": ["places.id"],
+    "status": "Não adotado para alimentar o CRM; referência eventual depende de revisão do caso de uso e termos, além de billing, chave, privacidade e atribuição"
+  },
+  "firecrawl": {
+    "credentials_env": "ED_CRM_FIRECRAWL_KEY",
+    "endpoint": "https://api.firecrawl.dev/v2/scrape",
+    "status": "Sem chave; leitura local disponível como alternativa"
+  },
+  "openai": {
+    "credentials_env": "ED_CRM_OPENAI_KEY",
+    "modelo": "",
+    "status": "Informar ID de modelo API disponível na conta; propostas só por ação explícita"
+  },
+  "instagram": {
+    "enabled": false,
+    "login": "instagram",
+    "app_id": "",
+    "account_id": "",
+    "api_version": "",
+    "redirect_uri": "",
+    "credentials_env": "ED_CRM_INSTAGRAM_ACCESS_TOKEN",
+    "app_secret_env": "ED_CRM_INSTAGRAM_APP_SECRET",
+    "scopes": ["instagram_business_basic"],
+    "allowed_use": "Leitura da conta profissional autorizada pelo titular; materiais sujeitos à permissão de uso",
+    "status": "Pendente de aplicativo Meta, consentimento, token e revisão de acesso"
+  }
+}

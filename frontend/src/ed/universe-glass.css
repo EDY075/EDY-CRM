@@ -1,0 +1,33 @@
+/* Visual direto do dashboard-glass.html. Clareza na tinta, sem véu sobre a arte. */
+[data-theme=nebulosa]{--ed-bg:#02030d;--ed-ink:#f5f7ff;--ed-muted:#e4eaff;--ed-border:#d9e5ff40;--ed-white:rgb(3 8 22 / .04);--ed-dark:transparent;--ed-topbar:transparent;--ed-soft:rgb(255 255 255/.06);--ed-row-head:rgb(255 255 255/.025);--ed-row-hover:rgb(255 255 255/.06);--ed-green:#ffaf91;--ed-focus:#ffaf91;--ed-primary-ink:#fff;--ed-primary-hover:#ef754f;--ed-side-ink:#f5f7ff;--ed-side-muted:#e4eaff;--ed-side-active:#ffffff15;--ed-side-active-ink:#fff;--ed-side-soft:#ffffff08;--ed-side-border:#ffffff20;--ed-avatar:#ed68464d;--ed-glass-reflection:linear-gradient(130deg,#ffffff0c,rgb(3 8 22 / calc(var(--ed-glass-opacity,.26)*.4)) 50%,#ffffff05)}
+:root .ed-nebula{opacity:1;overflow:hidden;background:#02030d}
+.ed-nebula-glass .ed-cloud.ed-universe-image{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;opacity:1;filter:saturate(calc(.75 + var(--ed-nebula-intensity,.7)*.25));border-radius:0;animation:none;transform:scale(1.13);will-change:transform}
+.ed-nebula-glass.is-paused .ed-cloud.ed-universe-image{will-change:auto}
+.ed-universe-brand{position:fixed;bottom:38px;right:26px;font-size:14px;letter-spacing:5px;font-weight:500;color:var(--ed-muted);text-shadow:0 2px 10px #000;pointer-events:none}
+:root .ed-app{display:grid;grid-template-columns:235px minmax(0,1fr);gap:25px;padding:28px;max-width:1550px;margin:auto;min-height:100svh;position:relative}
+:root .ed-sidebar{position:sticky;inset:auto;top:28px;align-self:start;width:235px;height:calc(100svh - 56px);min-height:620px;padding:24px 17px;border-radius:20px;border:1px solid var(--ed-border);z-index:10}
+:root .ed-workarea{margin-left:0;width:100%;min-width:0}
+:root .ed-topbar{padding:12px 16px;height:60px;border:1px solid var(--ed-border);border-radius:19px;gap:12px;margin-bottom:18px}
+:root #ed-main{padding:0 1px 20px;max-width:none}
+:root :is(.ed-panel,.ed-sidebar,.ed-topbar,.ed-flow-card,.ed-records,.ed-campaign,.ed-material,.ed-export-panel,.ed-dashboard-stat){background:var(--ed-glass-reflection);backdrop-filter:blur(2px);-webkit-backdrop-filter:blur(2px);border-radius:18px;box-shadow:0 8px 25px #0002,inset 0 1px 1px #ffffff30}
+:root .ed-sidebar{border-radius:20px}
+:root :is(h1,h2,h3,strong,p,small,label,td,th,a,summary,.ed-breadcrumb,.ed-local,.ed-nav-label){text-shadow:0 1px 2px #020510,0 2px 5px #020510,0 0 9px #020510d9}
+:root :is(.ed-record-card,.ed-panel .ed-panel){background:none;backdrop-filter:none;box-shadow:none}
+:root :is(input:not([type=checkbox]):not([type=range]),select,textarea){background:#060b202b;text-shadow:0 1px 3px #020510,0 0 6px #020510;color:#fff}
+:root .ed-button.primary{background:linear-gradient(#f47a53,#e15934);border:1px solid #ffac7860;box-shadow:0 2px 8px #df4b2720;color:#fff;text-shadow:0 1px 2px #5e1e0e;font-weight:600}
+:root .ed-button:not(.primary){background:#060b2040}
+:root .ed-sidebar nav>a{border:1px solid transparent;border-radius:10px}
+:root .ed-sidebar nav>a.active{border-color:#ffffff30;box-shadow:inset 0 1px #ffffff10}
+:root .ed-sidebar nav>a:hover{color:#fff}
+:root .ed-brand-symbol{color:#ff986f;background:linear-gradient(135deg,#ff876030,#da542e20);border-radius:10px;padding:4px}
+:root .ed-workspace{background:#ffffff08;border-radius:10px}
+:root .ed-glass-preview{background:var(--ed-glass-reflection);backdrop-filter:blur(2px)}
+:root .ed-modal,:root [role=dialog],:root dialog{background:#13192cf5}
+.ed-topbar-actions{display:flex;gap:8px;align-items:center}.ed-topbar-actions .ed-button{min-height:34px;padding:6px 10px;font-size:11px}
+@media(max-width:1100px){:root .ed-app{grid-template-columns:185px minmax(0,1fr);gap:18px;padding:20px}:root .ed-sidebar{width:185px;top:20px;height:calc(100svh - 40px);padding:20px 12px}:root .ed-brand{gap:8px;font-size:15px;padding:0 0 24px}}
+@media(max-width:780px){:root .ed-app{grid-template-columns:155px minmax(0,1fr);padding:12px;gap:12px}:root .ed-sidebar{width:155px;top:12px;height:calc(100svh - 24px);padding:20px 10px}:root .ed-brand{font-size:13px}:root .ed-brand-symbol{width:30px;height:30px}:root .ed-workspace{padding:8px;font-size:10px}:root .ed-sidebar nav>a{font-size:12px;padding:10px 8px}.ed-topbar-actions .ed-button{font-size:10px;padding:6px 8px}}
+@media(max-width:640px){:root .ed-app{display:flex;flex-direction:column;gap:14px;padding:12px}:root .ed-sidebar{position:relative;top:0;width:100%;height:auto;min-height:0;padding:13px 12px;border-radius:20px}:root .ed-brand{padding:0;font-size:17px}:root .ed-mobile-menu{margin-top:14px;border-top:1px solid #ffffff20}:root .ed-workarea{width:100%;margin:0}:root .ed-topbar{padding:10px;height:auto;min-height:54px;flex-wrap:wrap;justify-content:space-between}.ed-universe-brand{right:20px;bottom:20px;font-size:10px;letter-spacing:4px}:root .ed-nebula-glass .ed-cloud.ed-universe-image{width:100%;height:100%;inset:0}}
+@media(prefers-reduced-motion:reduce){.ed-nebula-glass .ed-cloud.ed-universe-image{will-change:auto}}
+
+/* O espaço disponível é do painel, sem margens negativas que alarguem o celular. */
+@media(max-width:640px){.ed-tabs{margin-left:0;margin-right:0;padding-left:0;padding-right:0}.ed-topbar{display:flex!important}.ed-breadcrumb{font-size:10px;overflow-wrap:anywhere;min-width:0}.ed-topbar-actions{flex-wrap:wrap}}

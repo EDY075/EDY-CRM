@@ -1,0 +1,19 @@
+import { useState } from 'react'
+import { useQuery,useMutation,useQueryClient } from '@tanstack/react-query'
+import { httpClient } from '@/services/httpClient'
+import { Field,Erro,Loading } from './shared'
+interface Vault {config:{endpoint:string;project_id:string;environment:string;secret_path:string;client_id:string;organization_slug:string;referencias:Record<string,string>};credencial_presente:boolean;armazenamento:string;teste?:{estado:string;mensagem:string;data:string}}
+export function VaultPanel(){
+ const q=useQuery({queryKey:['ed','cofre'],queryFn:()=>httpClient.get<Vault>('/api/ed/cofre')})
+ if(q.isPending)return <Loading/>
+ if(q.isError)return <Erro error={q.error}/>
+ return <VaultEditor key={JSON.stringify(q.data.config)} initial={q.data}/>
+}
+function VaultEditor({initial}:{initial:Vault}){
+ const client=useQueryClient(),[state,setState]=useState(initial.config),[secret,setSecret]=useState(''),[provider,setProvider]=useState('firecrawl'),[name,setName]=useState('')
+ const save=useMutation({mutationFn:()=>httpClient.put('/api/ed/cofre',{...state,...(secret?{client_secret:secret}:{})}),onSuccess:()=>{setSecret('');client.invalidateQueries({queryKey:['ed','cofre']})}})
+ const test=useMutation({mutationFn:()=>httpClient.post('/api/ed/cofre/testar'),onSettled:()=>client.invalidateQueries({queryKey:['ed','cofre']})})
+ const pull=useMutation({mutationFn:(id:string)=>httpClient.post('/api/ed/cofre/importar/'+id),onSuccess:()=>client.invalidateQueries({queryKey:['ed','integracoes-status']})})
+ return <section className="ed-panel ed-form ed-vault"><h2>Cofre de credenciais</h2><p>{initial.armazenamento}</p><p>Infisical opcional · {initial.teste?.estado||'acesso ainda não validado'}. {initial.teste?.mensagem}</p><details><summary>Configurar Infisical</summary><form onSubmit={e=>{e.preventDefault();save.mutate()}}><div className="ed-form-grid">{(['endpoint','project_id','environment','secret_path','client_id','organization_slug'] as const).map(k=><Field key={k} label={`Infisical · ${k}`}><input value={state[k]} onChange={e=>setState({...state,[k]:e.target.value})}/></Field>)}<Field label="Infisical · novo client secret"><input type="password" autoComplete="new-password" value={secret} onChange={e=>setSecret(e.target.value)} placeholder={initial.credencial_presente?'Presente · deixar vazio preserva':'Sem credencial'}/></Field></div><Field label="Fornecedor da referência"><select value={provider} onChange={e=>setProvider(e.target.value)}>{['firecrawl','apify','openai','openai_imagens','google','instagram','meta_discovery','twentyfirst'].map(k=><option key={k}>{k}</option>)}</select></Field><Field label="Nome do segredo remoto"><input value={name} onChange={e=>setName(e.target.value)}/></Field><button type="button" className="ed-button" disabled={!name} onClick={()=>{setState({...state,referencias:{...state.referencias,[provider]:name}});setName('')}}>Adicionar referência</button><p>{Object.entries(state.referencias).map(([k,v])=>`${k}: ${v}`).join(' · ')}</p><button className="ed-button" disabled={save.isPending}>Salvar cofre e referências</button></form></details>
+ <div className="ed-actions"><button className="ed-button" disabled={test.isPending||!initial.credencial_presente} onClick={()=>test.mutate()}>{test.isPending?'Testando…':'Testar cofre'}</button>{Object.keys(initial.config.referencias).map(k=><button key={k} className="ed-button" disabled={pull.isPending} onClick={()=>pull.mutate(k)}>Importar credencial · {k}</button>)}</div>{save.isError&&<Erro error={save.error}/>} {test.isError&&<Erro error={test.error}/>} {pull.isError&&<Erro error={pull.error}/>} {pull.isSuccess&&<p role="status">Credencial importada no backend. Teste o fornecedor abaixo.</p>}<small>Não transfere autenticação nativa Codex. Valores nunca aparecem no GET, no navegador ou no pacote. Variáveis do processo prevalecem sobre DPAPI.</small></section>
+}

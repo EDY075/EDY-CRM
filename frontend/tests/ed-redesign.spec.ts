@@ -1,0 +1,31 @@
+import {test,expect} from '@playwright/test'
+
+test('comando imediato e controles independentes do vidro',async({page})=>{
+ await page.goto('/');await expect(page.getByLabel('Seu comando')).toBeVisible()
+ await page.getByRole('button',{name:'Mostre os leads sem site.',exact:true}).click()
+ await expect(page.getByLabel('Seu comando')).toHaveValue('Mostre os leads sem site.')
+ await expect(page.locator('.ed-chat-messages')).toHaveCount(0)
+ await page.goto('/configuracoes/aparencia');await page.getByRole('button',{name:/^Nebulosa/}).click()
+ await page.getByRole('button',{name:'Mais transparente',exact:true}).click()
+ const alpha=()=>page.locator('html').evaluate(e=>getComputedStyle(e).getPropertyValue('--ed-glass-opacity').trim())
+ await expect.poll(alpha).toBe('0.18')
+ await page.getByText('Ajustar transparência, fundo e efeitos').click()
+ await page.getByLabel('Intensidade do universo').fill('0.9')
+ await expect.poll(alpha).toBe('0.18')
+ await page.getByRole('button',{name:'Pausar movimento',exact:true}).click();await expect.poll(alpha).toBe('0.18')
+ await page.reload();await expect.poll(alpha).toBe('0.18')
+ await expect(page.getByRole('button',{name:'Retomar movimento',exact:true})).toBeVisible()
+})
+
+test('CSV com mapeamento guiado e tarefas com detalhes por teclado',async({page,request})=>{
+ await page.goto('/crm/csv')
+ await page.getByLabel('CSV para revisar').setInputFiles({name:'empresas.csv',mimeType:'text/csv',buffer:Buffer.from('Empresa,Local\nEmpresa demonstrativa CSV,Recife\n')})
+ await page.getByLabel('Coluna: Empresa').selectOption('nome');await page.getByLabel('Coluna: Local').selectOption('cidade')
+ await page.getByRole('button',{name:'Revisar linhas mapeadas'}).click();await expect(page.getByRole('table')).toContainText('Empresa demonstrativa CSV')
+ await page.getByRole('button',{name:'Importar linhas revisadas'}).click();await expect(page.getByRole('status')).toContainText('Importação persistida')
+ await request.post('/api/ed/crm/registros/tarefa',{data:{titulo:'Tarefa demonstrativa de teclado',observacoes:'Detalhe preservado',prioridade:'normal'}})
+ await page.goto('/crm/tarefas');const row=page.locator('.ed-record-card').filter({hasText:'Tarefa demonstrativa de teclado'})
+ await row.getByRole('button',{name:'Ver detalhes e histórico'}).focus();await page.keyboard.press('Enter')
+ await expect(page.getByRole('dialog')).toContainText('Detalhe preservado');await page.keyboard.press('Escape')
+ await expect(page.getByRole('dialog')).toHaveCount(0);await expect(row.getByRole('button',{name:'Ver detalhes e histórico'})).toBeFocused()
+})
