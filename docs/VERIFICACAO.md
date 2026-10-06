@@ -17,6 +17,8 @@ Rodada de **5 de outubro de 2026**, em Windows, Python 3.12.10, Node.js 24.17.0 
 
 O audit inicial encontrou o advisory de source-map-js; foi aplicada somente a atualização transitiva **1.2.1 → 1.2.2**, mantendo as outras dependências. Fonte: [GHSA-68fv-2mgg-jv7q](https://github.com/advisories/GHSA-68fv-2mgg-jv7q).
 
+Depois dos commits de distribuição, um **clone Git limpo** foi instalado novamente com o script documentado e iniciado em 5181, com outro `data-demo/` próprio. As três prévias devolveram HTTP 200, identidade da empresa correspondente e origem correta na CSP. O banco `data/` não existia nesse clone. Os 33 hashes do pacote exportado permaneceram idênticos após o checkout. As seis regressões de distribuição passaram novamente (**6 testes em 5,75 s**); são repetição de parte dos 675, não seis testes adicionais.
+
 Não execute duas sessões de pytest usando a mesma pasta `--basetemp`: elas removem/recriam os mesmos arquivos. O `pytest.ini` mantém os temporários no checkout.
 
 ## Aplicação realmente servida
